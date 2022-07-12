@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-<body>
+<body class="container mt-5">
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow py-2 py-sm-0">
         <a class="navbar-brand" href="index.html">
@@ -24,10 +25,8 @@
                     <div class="col-lg-6 col-sm-12 mb-3 mb-sm-0">
                         <ul class="navbar-nav mr-auto">
                             <!-- always use single word for li -->
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home<span
-                                        class="sr-only">(current)</span></a>
-                            </li>
+                            
+
                         </ul>
                     </div>
                 </div>
@@ -40,118 +39,80 @@
     </nav>
     <!-- end navbar-->
 
-    <!-- start reading intro -->
-    <div class="container my-5">
-        <div class="read-intro bg-light">
-            <div class="row">
-                <div class="cover col-*">
-                    <img class="shadow" src="https://i.imgur.com/Jf7utvW.jpg" alt="">
-                </div>
-                <div class="info col">
-                    <h2 class="head">SPY×FAMILY</h2>
-                    <table class="table table-borderless">
-                        <tbody>
-                            <tr>
-                                <th scope="row">Genre:</th>
-                                <td>Action, Comedy, Slice of Life, Supernatural</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Start Date:</th>
-                                <td>Apr 9, 2022</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Status:</th>
-                                <td>Completed</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        Everyone has a part of themselves they cannot show to anyone else.
+        <form onsubmit="sendContact(event)">
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Enter your email address</label>
+        <input type="email" class="form-control" id="emailInput">
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Enter your message</label>
+        <textarea class="form-control" id="messageInput" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary" onclick="document.getElementById('emailInput' 'messageInput').value = ''">Clear</button>
 
-                        At a time when all nations of the world were involved in a fierce war of information happening behind closed doors, Ostania and Westalis had been in a state of cold war against one another for decades. The Westalis Intelligence Services' Eastern-Focused Division (WISE) sends their most talented spy, "Twilight," on a top-secret mission to investigate the movements of Donovan Desmond, the chairman of Ostania's National Unity Party, who is threatening peace efforts between the two nations.
+    </form>
 
-                        This mission is known as "Operation Strix." It consists of "putting together a family in one week in order to infiltrate social gatherings organized by the elite school that Desmond's son attends."
 
-                        "Twilight" takes on the identity of psychiatrist Loid Forger and starts looking for family members. But Anya, the daughter he adopts, turns out to have the ability to read people's minds, while his wife, Yor, is an assassin! With it being in each of their own interests to keep these facts hidden, they start living together while concealing their true identities from one another.
-                        World peace is now in the hands of this brand-new family as they embark on an adventure full of surprises.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end reading intro -->
 
-    <!-- start intro lists -->
-    <div class="container my-5 bg-white">
-        <div class="intro-lists">
-            <div class="head-list row bg-light">
-                <ul class="list-unstyled list-inline">
-                    <ul class="list-unstyled list-inline">
-                   <!--  <li class="list-inline-item"><a data-toggle="tab" class="active" href="#ch">360</a></li>
-                    <li class="list-inline-item"><a data-toggle="tab" href="#vol">480</a></li> -->
-                    <li class="list-inline-item"><a data-toggle="tab" href="#related">720</a></li>
-                    <li class="list-inline-item"><a data-toggle="tab" href="#gallery">1080</a></li>
-                </ul>
-                </ul>
-            </div>
-            <div class="tab-content">
+<form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Lcu2OIgAAAAAElJQcy1mXUpoDRQVSdZy21DeyMz"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
 
-                <!-- Switching Class-->
-               <!--  
-                Active: tab-pane fade in active show
-                Hide: tab-pane fade 
-                -->
 
-                <!-- start 360 -->
-                <div id="ch" class="tab-pane fade">
-                    <div class="row">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th><a hrfef="details.html" target="_blank">Episode 01 - 12 [360]</a></th>
-                                    <td class="text-muted text-uppercase float-right">OneDrive Link</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- end 360 -->
 
-                <!-- start 720 -->
-                <div id="related" class="tab-pane fade in active show">
-                    <div class="row">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th><a href="https://srt.phsensei.com/eg9Iu3" target="_blank">Episode 01 - 12 [720]</a></th>
-                                    <td class="text-muted text-uppercase float-right">OneDrive Link</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- end 720 -->
 
-                <!-- start 1080 -->
-                <div id="gallery" class="tab-pane fade">
-                    <div class="row">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th><a href="https://srt.phsensei.com/uqaSc7" target="_blank">Episode 01 - 12 [1080]</a></th>
-                                    <td class="text-muted text-uppercase float-right">OneDrive Link</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- end 1080 -->
-            </div>
-        </div>
-    </div>
-    <!-- end sh. list -->
 
-    <!-- start footer -->
+
+
+
+
+
+
+
+
+
+
+    
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document
+          .getElementById('emailInput').value;
+        const senderMessage = document
+          .getElementById('messageInput').value;
+
+        const webhookBody = {
+          embeds: [{
+            title: 'Contact Form Submitted',
+            fields: [
+              { name: 'Sender', value: senderEmail },
+              { name: 'Message', value: senderMessage }
+            ]
+          }],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/996200258482737152/9fWll49sVvvQRY6AX_SaoEuwwJMPIA1-ZeOUgoo8DxOvty3eiNKoMriqJi1fHcLnJWdy';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          alert('I have received your message!');
+        } else {
+          alert('There was an error! Try again later!');
+        }
+      }
+    </script>
+
     <footer>
         <div class="container py-4">
             <span class="copyright">&copy; Anime Hero <script>document.write(/\d{4}/.exec(Date())[0])</script></span>

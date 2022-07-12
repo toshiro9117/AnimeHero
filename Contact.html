@@ -48,17 +48,14 @@
         <label for="messageInput" class="form-label">Enter your message</label>
         <textarea class="form-control" id="messageInput" rows="3"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button class="btn btn-primary" onclick="document.getElementById('emailInput' 'messageInput').value = ''">Clear</button>
+      
 
-    </form>
-
-
-
-<form action="?" method="POST">
+    <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lcu2OIgAAAAAElJQcy1mXUpoDRQVSdZy21DeyMz"></div>
       <br/>
-      <input type="submit" value="Submit">
+      <!-- <input type="submit" value="Submit"> -->
+      <input type="submit" value="Submit" class="btn btn-primary"></button>
+      </form>
     </form>
 
 
@@ -75,7 +72,7 @@
 
 
 
-    
+
     <script>
       async function sendContact(ev) {
         ev.preventDefault();

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Anime Hero</title>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body class="container mt-5">
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow py-2 py-sm-0">
+        <a class="navbar-brand" href="index.html">
+            <h5>Anime Hero</h5>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container-fluid">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12 mb-3 mb-sm-0">
+                        <ul class="navbar-nav mr-auto">
+                            <!-- always use single word for li -->
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <!-- end navbar-->
+
+        <form onsubmit="sendContact(event)">
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Enter your email address</label>
+        <input type="email" class="form-control" id="emailInput">
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Enter your message</label>
+        <textarea class="form-control" id="messageInput" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    <!-- <form action="?" method="POST"> -->
+      <!-- <div class="g-recaptcha" data-sitekey="6Lcu2OIgAAAAAElJQcy1mXUpoDRQVSdZy21DeyMz"></div>
+      <br/>
+      <input type="submit" value="Submit"> -->
+      
+    <!-- </form> -->
+
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document
+          .getElementById('emailInput').value;
+        const senderMessage = document
+          .getElementById('messageInput').value;
+
+        const webhookBody = {
+          embeds: [{
+            title: 'Contact Form Submitted',
+            fields: [
+              { name: 'Sender', value: senderEmail },
+              { name: 'Message', value: senderMessage }
+            ]
+          }],
+        };
+
+        const webhookUrl = '';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          alert('I have received your message!');
+        } else {
+          alert('There was an error! Try again later!');
+        }
+      }
+    </script>
+
+    <footer>
+        <div class="container py-4">
+            <span class="copyright">&copy; Anime Hero <script>document.write(/\d{4}/.exec(Date())[0])</script></span>
+            <span class="design float-right">Redesigned Villain.In.Glasses</span>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- js files -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
